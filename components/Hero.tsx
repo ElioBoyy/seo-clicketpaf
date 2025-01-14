@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import logo from '../public/clicketpafLogo.webp'
 
 export default function Hero() {
   return (
@@ -19,7 +20,7 @@ export default function Hero() {
           </div>
           <div className="md:w-1/2">
             <Image 
-              src="/images/hero-image.jpg"
+              src={logo}
               alt="Click et Paf - Solutions Web Innovantes"
               width={600}
               height={400}
