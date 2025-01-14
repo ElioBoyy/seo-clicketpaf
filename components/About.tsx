@@ -1,6 +1,6 @@
-export default function About({ id }: { id?: string }) {
+export default function About() {
   return (
-    <section id={id} className="bg-gray-50 py-20">
+    <section id="about" className="bg-gray-50 py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">À Propos de Nous</h2>
         <div className="max-w-3xl mx-auto">
@@ -11,7 +11,7 @@ export default function About({ id }: { id?: string }) {
             {"Avec des années d'expérience dans l'industrie, nous comprenons l'importance de rester à la pointe des technologies web et des algorithmes des moteurs de recherche. Notre approche combine expertise technique et résolution créative de problèmes pour livrer des sites web qui non seulement ont fière allure, mais performent exceptionnellement bien dans les classements de recherche."}
           </p>
           <p className="text-gray-600">
-            {"Que vous soyez une petite start-up ou une grande entreprise, nous avons les compétences et les connaissances pour vous aider à atteindre vos objectifs en ligne. Du développement web sur mesure aux stratégies de marketing digital complètes, nous sommes là pour vous aider à réussir dans le monde numérique français."}
+            Que vous soyez une petite start-up ou une grande entreprise, nous avons les compétences et les connaissances pour vous aider à atteindre vos objectifs en ligne. Du développement web sur mesure aux stratégies de marketing digital complètes, nous sommes là pour vous aider à réussir dans le monde numérique français.
           </p>
         </div>
       </div>

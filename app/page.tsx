@@ -1,28 +1,23 @@
-import { Metadata } from 'next'
-import Header from '../components/Header'
+import type { Metadata } from 'next'
 import Hero from '../components/Hero'
 import Features from '../components/Features'
 import About from '../components/About'
 import Contact from '../components/Contact'
-import Footer from '../components/Footer'
-import StructuredData from '../components/StructuredData'
-
-import logo from '../public/clicketpafLogo.webp'
 
 export const metadata: Metadata = {
-  title: 'Click et Paf | Solutions Web Innovantes',
-  description: 'Click et Paf offre des solutions web innovantes et sur mesure pour votre entreprise. Découvrez nos services de développement web et de marketing digital.',
-  keywords: 'Click et Paf, click, et, paf, clicketpaf, clicket, etpaf, clickpaf, click&paf, click&, &paf, développement web, marketing digital, solutions web, France',
+  title: 'Accueil | Solutions Web Innovantes en France',
+  description: 'Découvrez les solutions web innovantes et sur mesure de Click et Paf pour votre entreprise en France. Experts en développement web et marketing digital.',
   openGraph: {
-    title: 'Click et Paf | Solutions Web Innovantes',
-    description: 'Click et Paf offre des solutions web innovantes et sur mesure pour votre entreprise. Découvrez nos services de développement web et de marketing digital.',
-    url: 'https://clicketpaf.fr',
+    title: 'Click et Paf | Solutions Web Innovantes en France',
+    description: 'Découvrez les solutions web innovantes et sur mesure de Click et Paf pour votre entreprise en France. Experts en développement web et marketing digital.',
+    url: 'https://fr.clicketpaf.online',
     siteName: 'Click et Paf',
     images: [
       {
-        url: logo.src,
+        url: 'https://fr.clicketpaf.online/images/og-image.jpg',
         width: 1200,
         height: 630,
+        alt: 'Click et Paf - Solutions Web Innovantes',
       },
     ],
     locale: 'fr_FR',
@@ -30,25 +25,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Click et Paf | Solutions Web Innovantes',
-    description: 'Click et Paf offre des solutions web innovantes et sur mesure pour votre entreprise. Découvrez nos services de développement web et de marketing digital.',
-    images: [logo.src],
+    title: 'Click et Paf | Solutions Web Innovantes en France',
+    description: 'Découvrez les solutions web innovantes et sur mesure de Click et Paf pour votre entreprise en France. Experts en développement web et marketing digital.',
+    images: ['https://fr.clicketpaf.online/images/twitter-image.jpg'],
   },
 }
 
 export default function Home() {
   return (
-    <>
-      <StructuredData />
-      <Header />
-      <main>
-        <Hero />
-        <Features id="features" />
-        <About id="about" />
-        <Contact id="contact" />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <Hero />
+      <Features />
+      <About />
+      <Contact />
+    </main>
   )
 }
 

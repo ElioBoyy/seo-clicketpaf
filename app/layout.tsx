@@ -1,58 +1,44 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import './globals.css'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import StructuredData from '../components/StructuredData'
 
-import logo from "../public/clicketpafLogo.webp";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Click et Paf | Solutions Web Innovantes',
-  description: 'Click et Paf offre des solutions web innovantes et sur mesure pour votre entreprise. Découvrez nos services de développement web et de marketing digital.',
-  keywords: 'Click et Paf, click, et, paf, clicketpaf, clicket, etpaf, clickpaf, click&paf, click&, &paf, développement web, marketing digital, solutions web, France',
-  openGraph: {
-    title: 'Click et Paf | Solutions Web Innovantes',
-    description: 'Click et Paf offre des solutions web innovantes et sur mesure pour votre entreprise. Découvrez nos services de développement web et de marketing digital.',
-    url: 'https://clicketpaf.fr',
-    siteName: 'Click et Paf',
-    images: [
-      {
-        url: logo.src,
-        width: 630,
-        height: 630,
-      },
-    ],
-    locale: 'fr_FR',
-    type: 'website',
+  metadataBase: new URL('https://fr.clicketpaf.online'),
+  title: {
+    default: 'Click et Paf | Solutions Web Innovantes en France',
+    template: '%s | Click et Paf'
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Click et Paf | Solutions Web Innovantes',
-    description: 'Click et Paf offre des solutions web innovantes et sur mesure pour votre entreprise. Découvrez nos services de développement web et de marketing digital.',
-    images: [logo.src],
+  description: 'Click et Paf offre des solutions web innovantes et sur mesure pour votre entreprise en France. Experts en développement web et marketing digital.',
+  keywords: ['Click et Paf', 'développement web', 'marketing digital', 'solutions web', 'France', 'SEO', 'performance web', 'design responsive'],
+  authors: [{ name: 'Click et Paf Team' }],
+  creator: 'Click et Paf',
+  publisher: 'Click et Paf',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="fr">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={inter.className}>
+        <StructuredData />
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
-  );
+  )
 }
+
