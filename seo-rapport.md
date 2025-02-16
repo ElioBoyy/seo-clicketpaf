@@ -77,9 +77,6 @@ Au-delà des optimisations techniques, une stratégie globale a été mise en pl
 - **Pratiques de Développement Lean :**  
   Nous adoptons une approche lean centrée sur la performance, évitant le surchargement de code et optimisant en continu les pages pour une meilleure réactivité et expérience utilisateur.
 
-- **Suivi et Analyse Continus :**  
-  Un système de monitoring SEO a été instauré, permettant de suivre régulièrement les performances du site. Les données collectées sont analysées pour identifier les axes d’amélioration et ajuster la stratégie en fonction des évolutions des algorithmes de recherche.
-
 ---
 
 ## Conclusion
